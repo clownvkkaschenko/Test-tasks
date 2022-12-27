@@ -1,5 +1,5 @@
 # Тестовые задания с собеседований
-<details><summary># Courier_service_API</summary>
+<details><summary>Courier service API</summary>
 Необходимо разработать прототип API сервиса курьерской доставки
  
 #### Что должен включать в себя сервис:
