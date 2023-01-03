@@ -1,4 +1,5 @@
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import RegexValidator
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -7,7 +8,7 @@ class CustomUser(AbstractUser):
     """Кастомная модель юзеров, которая основана на модели «AbstractUser».
 
     Поля модели:
-      - email: электронная почта пользователя
+      - username: электронная почта пользователя
       - first_name: имя пользователя
       - last_name: фамилия пользователя
       - phone: телефон пользователя
@@ -22,13 +23,19 @@ class CustomUser(AbstractUser):
     )
     first_name = models.CharField(
         max_length=154,
+        validators=[RegexValidator(r'[а-яА-Я]')],
         verbose_name='Имя пользователя'
     )
     last_name = models.CharField(
         max_length=154,
+        validators=[RegexValidator(r'[а-яА-Я]')],
         verbose_name='Фамилия пользователя'
     )
-    phone = PhoneNumberField(verbose_name='Телефон пользователя')
+    phone = PhoneNumberField(
+        validators=[RegexValidator(
+            r'^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$'
+        )],
+        verbose_name='Телефон пользователя')
     street_name = models.CharField(
         max_length=154,
         verbose_name='Навзание улицы'
