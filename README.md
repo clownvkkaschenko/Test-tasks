@@ -1,5 +1,13 @@
-# Тестовые задания с собеседований
+<div id="header" align="center">
+ <h1>Тестовые задания с собеседований</h1>
+</div>
+
 <details><summary>Courier service API ❌</summary>
+
+<div id="header" align="center">
+ <h1>Courier service API</h1>
+</div>
+
 Необходимо разработать прототип API сервиса курьерской доставки
  
 #### Что должен включать в себя сервис:
@@ -31,6 +39,10 @@
 
 <details><summary>Django tree menu ✅</summary>
 
+<div id="header" align="center">
+ <h1>Django tree menu</h1>
+</div>
+
 Джанго приложение, которое реализовывает древовидное меню. Позволяет вносить/редактировать меню через админку, и нарисовать на любой нужной странице меню по названию.
 ```
 {% draw_menu 'name' %}
@@ -42,9 +54,13 @@
 - На одной странице может быть несколько меню, они определяются по названию.
 </details>
 
-<details><summary>Ylab probation ❌</summary>
+<details><summary>Ylab ❌</summary>
 
-Домашние задания с интенсива Ylab, направленные на отбор на стажировку в компанию
+<div id="header" align="center">
+ <h1>Ylab Homework</h1>
+</div>
+
+Домашние задания с интенсива Ylab
 
 ### Homework_1 содержит 5 задач:
 - domain_name: Метод domain_name, который вернет домен из url адреса.
